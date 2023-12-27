@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "ad02d4b9-8e71-4e47-80bc-ec0d05be5478",
+		"name": "KS3M",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Miner Settings",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ip}}/user/machineconfig",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"user",
+						"machineconfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Miner Settings",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "pool1address",
+							"value": "stratum+tcp://kheavyhash.auto.nicehash.com:9200",
+							"type": "text"
+						},
+						{
+							"key": "pool1miner",
+							"value": "NHb...L6D",
+							"type": "text"
+						},
+						{
+							"key": "pool1pwd",
+							"value": "x",
+							"type": "text"
+						},
+						{
+							"key": "pool2address",
+							"value": "stratum+tcp://asia-kas.2miners.com:2323",
+							"type": "text"
+						},
+						{
+							"key": "pool2miner",
+							"value": "kaspa:qqp...jzj",
+							"type": "text"
+						},
+						{
+							"key": "pool2pwd",
+							"value": "x",
+							"type": "text"
+						},
+						{
+							"key": "pool3address",
+							"value": "stratum+tcp://us-kas.2miners.com:2323",
+							"type": "text"
+						},
+						{
+							"key": "pool3miner",
+							"value": "kaspa:qqp...jzj",
+							"type": "text"
+						},
+						{
+							"key": "pool3pwd",
+							"value": "x",
+							"type": "text"
+						},
+						{
+							"key": "fanratio",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "fanmode",
+							"value": "normal",
+							"description": "normal / sleep",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ip}}/user/machineconfig",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"user",
+						"machineconfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get IP Config",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ip}}/user/ipconfig",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"user",
+						"ipconfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Status Info",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ip}}/user/userpanel",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"user",
+						"userpanel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ip",
+			"value": "127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
